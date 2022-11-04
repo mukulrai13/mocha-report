@@ -1,0 +1,274 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 8,
+    "passes": 3,
+    "pending": 0,
+    "failures": 5,
+    "start": "2022-11-03T08:49:56.572Z",
+    "end": "2022-11-03T08:50:44.797Z",
+    "duration": 48225,
+    "testsRegistered": 8,
+    "passPercent": 37.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "53dfcf6d-9249-4572-978d-dba2137d0718",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8abf66d-6e4f-47b3-a07d-9bf023c3976d",
+          "title": "login page  ",
+          "fullFile": "/home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/automation_tests/productiv/Main/index.js",
+          "file": "/automation_tests/productiv/Main/index.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login page using email and password",
+              "fullTitle": "login page   login page using email and password",
+              "timedOut": false,
+              "duration": 29759,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"Start Tracking Time\"",
+              "code": "// driver = await new Builder().forBrowser(\"chrome\").build();\nawait driver.manage().window().maximize();\nawait driver.get(baseUrl);\nawait driver.findElement(By.xpath(\"//input[@name='email']\")).sendKeys(email);\nawait driver.findElement(By.xpath(\"//input[@name='password']\")).sendKeys(pass);\nawait driver.findElement(By.xpath(\"//button[@id='login']\")).click();\nawait driver.sleep(4000)\nlet actualtitle = await driver.findElement(By.xpath(\"//h4[text()='Start Tracking Time']\")).getText();\nlet expectedtitle = \"Start Tracking Time\";\nlet z = assert.equal(expectedtitle, actualtitle);\naddContext(this, actualtitle);\n// await driver.sleep(1000);\n// await driver.navigate().back();\nawait driver.sleep(4000)\nawait driver.switchTo().newWindow('tab');\nawait driver.sleep(2000);\nawait driver.get(\"https://flask.io/new\")\n// const newtab = driver.getWindowHandle();\nawait driver.sleep(1000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"login page using email and password\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\nawait driver.switchTo().window(originalWindow);\nawait driver.sleep(3000);\nconst tab1 = await driver.getWindowHandle();",
+              "err": {},
+              "uuid": "574365f6-07a7-47be-b93f-76a56e0fb023",
+              "parentUUID": "d8abf66d-6e4f-47b3-a07d-9bf023c3976d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "ReceivablePage",
+              "fullTitle": "login page   ReceivablePage",
+              "timedOut": false,
+              "duration": 2,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const {\n    driver\n} = require('../receivables/receivables')",
+              "err": {},
+              "uuid": "77ebc992-5dde-4c42-956b-dfeed58b8a79",
+              "parentUUID": "d8abf66d-6e4f-47b3-a07d-9bf023c3976d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "574365f6-07a7-47be-b93f-76a56e0fb023",
+            "77ebc992-5dde-4c42-956b-dfeed58b8a79"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 29761,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        },
+        {
+          "uuid": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+          "title": "Recievables page",
+          "fullFile": "/home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/automation_tests/productiv/Main/index.js",
+          "file": "/automation_tests/productiv/Main/index.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "click on recievables page",
+              "fullTitle": "Recievables page click on recievables page",
+              "timedOut": false,
+              "duration": 10398,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"click on recievables page\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//a[text()='Receivables']\")).click();\nawait driver.sleep(2000);",
+              "err": {},
+              "uuid": "ee3b21cf-9c5c-485e-a327-34e2456d508a",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "create client invoice",
+              "fullTitle": "Recievables page create client invoice",
+              "timedOut": false,
+              "duration": 2013,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "driver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"create client invoice\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//button[text()=' Client Invoice']\")).click();\nawait driver.sleep(2000);",
+              "err": {
+                "message": "NoSuchWindowError: no such window: window was already closed\n  (Session info: chrome=105.0.5195.102)",
+                "estack": "NoSuchWindowError: no such window: window was already closed\n  (Session info: chrome=105.0.5195.102)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:522:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:548:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:474:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:735:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:140:15)\n    at async /home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/node_modules/selenium-webdriver/lib/webdriver.js:190:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:184:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:189:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:733:22)\n    at async Context.<anonymous> (automation_tests/productiv/receivables/receivables.js:49:9)",
+                "diff": null
+              },
+              "uuid": "9c9c1865-8fbf-4432-a68b-ff13ead96a63",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify to select the client and date and click on the create invoice",
+              "fullTitle": "Recievables page verify to select the client and date and click on the create invoice",
+              "timedOut": false,
+              "duration": 2006,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "driver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"verify to select client and the date and click on the create invoice\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\n//select client\nawait driver.findElement(By.xpath(\"\")).click();\nawait driver.sleep(2000);\n//select date\nawait driver.findElement(By.xpath(\"//input[@placeholder='Select Date']\")).click();\nawait driver.sleep(2000);\n//click on today\nawait driver.findElement(By.xpath(\"//button[text()=' This Month ']\")).click();\nawait driver.sleep(2000);\n//click on create invoice\nawait driver.findElement(By.xpath(\"//span[text()='Create Invoice']\")).click();\nawait driver.sleep(2000);",
+              "err": {
+                "message": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)",
+                "estack": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:522:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:548:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:474:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:735:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:140:15)\n    at async /home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/node_modules/selenium-webdriver/lib/webdriver.js:190:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:184:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:189:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:733:22)\n    at async Context.<anonymous> (automation_tests/productiv/receivables/receivables.js:65:9)",
+                "diff": null
+              },
+              "uuid": "95f75a55-1fc2-4531-9b45-169a083ac121",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "add invoice",
+              "fullTitle": "Recievables page add invoice",
+              "timedOut": false,
+              "duration": 2004,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "driver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"add the invoice\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\n//add bill\nawait driver.findElement(By.xpath(\"//input[@formcontrolname='invoice_number']\")).sendKeys(item1.bill);\nawait driver.sleep(2000);\n//add service description\nawait driver.findElement(By.xpath(\"//input[@name='description']\")).sendKeys(item1.servicedescription);\nawait driver.sleep(2000);\n//click on next\nawait driver.findElement(By.xpath(\"//span[text()='Next »']\")).click();\nawait driver.sleep(2000);",
+              "err": {
+                "message": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)",
+                "estack": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:522:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:548:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:474:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:735:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:140:15)\n    at async /home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/node_modules/selenium-webdriver/lib/webdriver.js:190:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:184:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:189:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:733:22)\n    at async Context.<anonymous> (automation_tests/productiv/receivables/receivables.js:92:13)",
+                "diff": null
+              },
+              "uuid": "46066270-7b0a-4289-989d-5279de366802",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "click on create and send invoice",
+              "fullTitle": "Recievables page click on create and send invoice",
+              "timedOut": false,
+              "duration": 2011,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "driver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"click on create and send invoice\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//span[text()=' Create and send invoice ']\")).click();\nawait driver.sleep(2000);",
+              "err": {
+                "message": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)",
+                "estack": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:522:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:548:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:474:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:735:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:140:15)\n    at async /home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/node_modules/selenium-webdriver/lib/webdriver.js:190:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:184:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:189:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:733:22)\n    at async Context.<anonymous> (automation_tests/productiv/receivables/receivables.js:116:9)",
+                "diff": null
+              },
+              "uuid": "3b72720f-7a99-4e7a-99f8-0bce2a1aabcb",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify whether the invoice is generated or not",
+              "fullTitle": "Recievables page Verify whether the invoice is generated or not",
+              "timedOut": false,
+              "duration": 10,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let actualtitle = await driver.findElement(By.xpath(\"//div[@class='toast-bottom-right toast-container']\")).getText();\nconsole.log(\".......\", actualtitle);\naddContext(this, actualtitle);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[1]);\n})\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(\"Verify whether the invoice is generated or not\")\nawait driver.sleep(2000);\nawait driver.findElement(By.xpath(\"//input[@type='text']\")).sendKeys(Key.ENTER);\nawait driver.sleep(2000);\ndriver.getAllWindowHandles().then(function (handles) {\n    driver.switchTo().window(handles[0]);\n})\nawait driver.sleep(2000);\nlet expectedtitle = \"Invoice generated successfully\";\nlet finaltitle = assert.equal(expectedtitle, actualtitle);\nawait driver.sleep(2000);",
+              "err": {
+                "message": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)",
+                "estack": "NoSuchWindowError: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome=105.0.5195.102)\n    at Object.throwDecodedError (node_modules/selenium-webdriver/lib/error.js:522:15)\n    at parseHttpResponse (node_modules/selenium-webdriver/lib/http.js:548:13)\n    at Executor.execute (node_modules/selenium-webdriver/lib/http.js:474:28)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:735:17)\n    at async toWireValue (node_modules/selenium-webdriver/lib/webdriver.js:140:15)\n    at async /home/hp-021/Desktop/Productiv_Automation_testing/backend_tt/node_modules/selenium-webdriver/lib/webdriver.js:190:16\n    at async forEachKey (node_modules/selenium-webdriver/lib/webdriver.js:184:9)\n    at async convertKeys (node_modules/selenium-webdriver/lib/webdriver.js:189:3)\n    at async thenableWebDriverProxy.execute (node_modules/selenium-webdriver/lib/webdriver.js:733:22)\n    at async Context.<anonymous> (automation_tests/productiv/receivables/receivables.js:129:27)",
+                "diff": null
+              },
+              "uuid": "5b3d479c-a2bf-491b-b8a0-dbff6423b6e7",
+              "parentUUID": "4f3eacb2-450f-4981-88ae-c7ac48482b16",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ee3b21cf-9c5c-485e-a327-34e2456d508a"
+          ],
+          "failures": [
+            "9c9c1865-8fbf-4432-a68b-ff13ead96a63",
+            "95f75a55-1fc2-4531-9b45-169a083ac121",
+            "46066270-7b0a-4289-989d-5279de366802",
+            "3b72720f-7a99-4e7a-99f8-0bce2a1aabcb",
+            "5b3d479c-a2bf-491b-b8a0-dbff6423b6e7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 18442,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
